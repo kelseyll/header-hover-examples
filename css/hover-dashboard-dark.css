@@ -1,0 +1,293 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue";
+    -webkit-font-smoothing: antialiased;
+    background-color: #F8F8F8;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: #212121;
+    box-shadow: 0px 1px rgba(255,255,255,0.08);
+}
+
+header .container {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 53px;
+    padding: 0 16px;
+}
+
+header li {
+    transition: background 0.1s ease-out;
+    -webkit-transition: background 0.1s ease-out;
+    -moz-transition: background 0.1s ease-out;
+}
+
+header .tralbum-container {
+    max-width: 1228px;
+}
+
+/* User Icons */
+header .user-icons,
+header .dashboard-links {
+    position: relative;
+    height: 100%;
+}
+
+header .user-icons li,
+header .dashboard-links li {
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+header .user-icons li a,
+header .dashboard-links li a {
+    display: flex;
+    padding: 0 15px;
+    height: 100%;
+    align-items: center;
+}
+
+header .dashboard-links {
+    margin-left: 19px;
+}
+
+header .dashboard-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #FFF;
+    height: 100%;
+}
+
+header .user-icons li:hover,
+header .dashboard-links li:hover {
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+}
+
+header .logo {
+    display: block;
+    padding: 10px 0;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header .user-icons > li,
+header .logo-and-search > li {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header svg, header img {
+    display: flex;
+    align-self: center;
+}
+
+header .logo-and-search input {
+    font-family: "Helvetica Neue";
+    background-color: #F3F3F3;
+    padding: 10px 13px;
+    font-size: 14px;
+    border: none;
+    width: 316px;
+    color: rgba(51,51,51,0.7);
+    border-radius: 3px;
+}
+
+header .logo-and-search input:focus {
+    outline: none;
+}
+
+header .profile {
+    border-radius: 50%;
+    display: block;
+}
+
+/* Homepage Styles */
+
+.hero {
+    width: 100%;
+    height: 540px;
+    background-color: #333;
+}
+
+.inner-hero {
+    margin: 0 auto;
+    height: 540px;
+    max-width: 1440px;
+    background-color: #000;
+}
+
+.inner-page {
+    max-width: 97%;
+    margin: 0 auto;
+    background-color: #FFF;
+    height: 4000px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d6d6d6+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #5e4da1 0%, #5D9FBA 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #5e4da1 0%,#5D9FBA 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #5e4da1 0%,#5D9FBA 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
+}
+
+@media(min-width:1130px) {
+    .inner-page {
+        max-width: 1106px;
+    }
+}
+
+/* Tralbum Styles */
+
+.tralbum {
+    flex-direction: column;
+    max-width: 975px;
+    height: 3000px;
+    margin: 54px auto 0;
+    background-color: #FFF;
+}
+
+.tralbum-cart {
+    /* position cart to right */
+    display: flex;
+    justify-content: flex-end;
+    max-width: 975px;
+    height: 3000px;
+    margin: 0 auto;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #333 30%, #666 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #333 30%,#666 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #333 30%,#666 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
+}
+
+.header-image {
+    background-color: #ddd;
+    height: 180px;
+    width: 100%;
+}
+
+.tralbum-content {
+    margin-top: 44px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.album-art {
+    background-color: #EEE;
+    height: 350px;
+    width: 350px;
+}
+
+.right-column {
+    width: 130px;
+    height: 100vh;
+    background-color: #ccc;
+}
+
+/* Dropdown Icon State */
+.link-active {
+    background-color: #F3F3F3;
+}
+
+/* User Menu */
+
+.user-menu,
+.add-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    width: 220px;
+    background-color: #FFF;
+    border: 1px #EEE solid;
+    border-radius: 3px;
+    padding: 10px 0;
+    font-size: 15px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.1);
+}
+
+.user-menu ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+.user-menu ul:before {
+    border-bottom: 1px solid #EEE;
+}
+
+header .user-icons .user-menu li:hover,
+header .add-menu li:hover, {
+    background-color: #f3f3f3;
+}
+
+header .user-icons .user-menu li.divider:hover {
+    background-color: #FFF;
+    cursor: auto;
+}
+
+.user-menu li,
+.add-menu li {
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 32px;
+    padding: 0 20px;
+}
+
+.user-menu .divider:after {
+    content: "";
+    margin: 10px 0;
+    bottom:0;
+    height: 1px;
+    background-color: #EEE;
+    bottom:-1px;left:0;width:100%;
+}
+
+.add-menu {
+    left: 0;
+    width: 170px;
+}
+
+.menu-show {
+    display: flex;
+}
+
+
+/* Hover Options */
+
+/* header .user-icons li:hover path {
+    fill: #1DA0C3;
+} */
+
+/* header .right > li:hover:after {
+    content: "";
+    position:absolute;
+    bottom:0;
+    height: 1px;
+    background:black;
+    bottom:-1px;left:0;width:100%;
+} */
