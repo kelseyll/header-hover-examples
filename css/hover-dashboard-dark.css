@@ -9,7 +9,7 @@ body {
     box-sizing: border-box;
     font-family: "Helvetica Neue";
     -webkit-font-smoothing: antialiased;
-    background-color: #F8F8F8;
+    background-color: #000;
 }
 
 header {
@@ -78,8 +78,14 @@ header .dashboard-links a {
 header .user-icons li:hover,
 header .dashboard-links li:hover {
     cursor: pointer;
-    background: rgba(255,255,255,0.2);
+    background: #F3F3F3;
 }
+
+header .user-icons > li:hover,
+header .dashboard-links > li:hover {
+    background: rgba(255,255,255,0.1);
+}
+
 
 header .logo {
     display: block;
@@ -119,11 +125,6 @@ header .logo-and-search input {
 
 header .logo-and-search input:focus {
     outline: none;
-}
-
-header .profile {
-    border-radius: 50%;
-    display: block;
 }
 
 /* Homepage Styles */
@@ -166,8 +167,8 @@ header .profile {
     flex-direction: column;
     max-width: 975px;
     height: 3000px;
-    margin: 54px auto 0;
-    background-color: #FFF;
+    margin: 53px auto 0;
+    background-color: #666;
 }
 
 .tralbum-cart {
@@ -185,7 +186,7 @@ header .profile {
 }
 
 .header-image {
-    background-color: #ddd;
+    background-color: #777;
     height: 180px;
     width: 100%;
 }
@@ -197,7 +198,7 @@ header .profile {
 }
 
 .album-art {
-    background-color: #EEE;
+    background-color: #999;
     height: 350px;
     width: 350px;
 }
@@ -205,12 +206,12 @@ header .profile {
 .right-column {
     width: 130px;
     height: 100vh;
-    background-color: #ccc;
+    background-color: #777;
 }
 
 /* Dropdown Icon State */
 .link-active {
-    background-color: #F3F3F3;
+    background-color: rgba(255,255,255,0.1);
 }
 
 /* User Menu */
@@ -291,3 +292,7 @@ header .user-icons .user-menu li.divider:hover {
     background:black;
     bottom:-1px;left:0;width:100%;
 } */
+
+#search {
+    fill: #FFF;
+}
